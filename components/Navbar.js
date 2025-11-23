@@ -9,11 +9,10 @@ export default function Navbar() {
 
   const buttonText = pathname === "/about" ? "Tentang Posnod" : "Apa itu Posnod?";
 
-  // Jika di home → fixed
   const navClass =
     pathname === "/"
       ? "fixed top-0 left-0 z-50"
-      : "static"; // di about navbarnya ikut discroll
+      : "static";
 
   return (
     <div className={`w-full flex justify-center pt-10 bg-gray-100 pb-4 ${navClass}`}>
