@@ -3,25 +3,35 @@ import './global.css';
 export const metadata = {
   metadataBase: new URL('https://posnod.com'),
 
-  title: 'Posnod | The System Learning',
-  description: 'Posnod adalah platform pembelajaran sistem yang modern, cepat, dan mudah digunakan.',
+  title: {
+    default: 'Posnod | The System Learning',
+    template: '%s | Posnod'
+  },
+
+  description:
+    'Posnod adalah platform pembelajaran sistem yang modern, cepat, dan mudah digunakan.',
+
   applicationName: 'Posnod',
+
+  keywords: [
+    'Posnod',
+    'System Learning',
+    'Pembelajaran',
+    'Platform Edukasi',
+    'Belajar Online'
+  ],
 
   icons: {
     icon: [
-      { url: '/favicon.ico', type: 'image/x-icon' },
+      { url: '/favicon.ico' },
       { url: '/icon-192.png', sizes: '192x192', type: 'image/png' },
       { url: '/icon-512.png', sizes: '512x512', type: 'image/png' }
     ],
     apple: [
       { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }
     ],
-    shortcut: ['/favicon.ico'],
+    shortcut: ['/favicon.ico']
   },
-
-  keywords: [
-    'Posnod', 'System Learning', 'Pembelajaran', 'Platform Edukasi', 'Belajar Online'
-  ],
 
   openGraph: {
     title: 'Posnod | The System Learning',

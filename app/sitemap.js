@@ -1,9 +1,11 @@
 export default function sitemap() {
+  const baseUrl = "https://posnod.com";
+
   return [
     {
-      url: 'https://posnod.com',
+      url: baseUrl,
       lastModified: new Date(),
-      changeFrequency: 'daily',
+      changeFrequency: "daily",
       priority: 1.0,
     }
   ];
