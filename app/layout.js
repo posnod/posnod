@@ -7,29 +7,27 @@ export const metadata = {
     default: "Posnod - Social Learning Platform",
     template: "%s | Posnod",
   },
-
   description:
     "Platform pembelajaran sosial yang menyediakan pondasi modern untuk belajar, berbagi pengetahuan, dan berkolaborasi.",
-
   keywords: [
-    "Posnod",
-    "Learning",
-    "Pembelajaran",
-    "Platform Edukasi",
-    "Belajar Online",
+    "Posnod", "Learning", "Pembelajaran", "Platform Edukasi", "Belajar Online",
   ],
 
   icons: {
     icon: [
-      { url: "/favicon.ico" },
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.ico", sizes: "any" },
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
     ],
     apple: [
-      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }
     ],
+    shortcut: ["/favicon.ico"],
   },
 
+  applicationName: "Posnod",
   manifest: "/manifest.json",
 
   alternates: {

@@ -15,6 +15,7 @@ function getInitials(email) {
     .slice(0, 2);
 }
 
+// Simulasi inisial email
 export default function AvatarSimulation() {
   const router = useRouter();
   const pathname = usePathname();
