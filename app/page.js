@@ -1,21 +1,34 @@
 "use client";
 
 import { useState } from "react";
-import Navbar from "@/components/Navbar";
+import { useRouter, usePathname } from "next/navigation";
 import Image from "next/image";
 
-export default function LandingPage({ users = [] }) {
+// Fungsi mengambil inisial dari email
+function getInitials(email) {
+  if (!email) return "?";
+  const name = email.split("@")[0];
+  return name
+    .split(/[._-]/)
+    .map((part) => part[0]?.toUpperCase())
+    .join("")
+    .slice(0, 2);
+}
+
+export default function AvatarSimulation() {
+  const router = useRouter();
+  const pathname = usePathname();
+
   const [email, setEmail] = useState("");
 
-  const getInitials = (email) => {
-    if (!email) return "?";
-    const name = email.split("@")[0];
-    return name
-      .split(/[._]/)
-      .map((part) => part[0]?.toUpperCase())
-      .join("")
-      .slice(0, 2);
-  };
+  const dummyUsers = [
+    { email: "agus.susanto@example.com" },
+    { email: "rina_putri@example.com" },
+    { email: "budi@example.com" },
+  ];
+
+  const buttonText =
+    pathname === "/about" ? "Tentang Posnod" : "Apa itu Posnod?";
 
   const isValidEmail = (value) =>
     /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim());
@@ -24,11 +37,37 @@ export default function LandingPage({ users = [] }) {
 
   return (
     <div className="w-full bg-[#FBFBFB] min-h-screen">
-      <Navbar />
+      {/* Navbar */}
+      <div className="w-full flex justify-center pt-20 bg-[#FBFBFB] pb-4 sm:static md:fixed md:top-0 md:left-0 z-50">
+        <button
+          onClick={() => router.push("/about")}
+          className="flex items-center gap-3 px-2 py-2 rounded-full text-sm border border-gray-300 bg-white"
+        >
+          {/* Logo */}
+          <span
+            onClick={(e) => {
+              e.stopPropagation();
+              router.push("/");
+            }}
+            className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center bg-white transition hover:scale-110 hover:shadow-sm cursor-pointer"
+          >
+            <Image
+              src="/images/butterfly.png"
+              alt="Butterfly Icon"
+              width={20}
+              height={20}
+            />
+          </span>
 
-      <div className="flex flex-col items-center justify-center 
-pt-[70px] px-4 text-center md:pt-48 
-mt-32 md:mt-0">
+          {/* Text */}
+          <span className="font-[14px] border border-gray-300 rounded-full px-6 py-2 bg-white transition hover:scale-105 hover:shadow-sm cursor-pointer">
+            {buttonText}
+          </span>
+        </button>
+      </div>
+
+      {/* Content */}
+      <div className="pt-14 md:pt-[200px] flex flex-col items-center justify-center px-4 text-center">
         <h1 className="text-[32px] md:text-[48px] mb-[44px] md:mb-8">
           The Living System
         </h1>
@@ -49,14 +88,10 @@ mt-32 md:mt-0">
           Dapatkan Early Access
         </a>
 
-        {/* FORM EMAIL */}
-        <div
-          className="max-w-sm md:max-w-2xl w-full flex flex-col md:flex-row items-center md:items-start justify-center md:justify-normal gap-3 md:gap-4 mt-6 md:mt-8"
-        >
-          {/* INPUT EMAIL */}
-          <div
-            className="bg-[#4B3B72]/5 rounded-full pl-6 pr-2 py-2 flex items-center w-full md:w-auto justify-center md:justify-start"
-          >
+        {/* Form email */}
+        <div className="max-w-sm md:max-w-2xl w-full flex flex-col md:flex-row items-center md:items-start justify-start gap-3 md:gap-4 mt-6 md:mt-8">
+          {/* Input email */}
+          <div className="bg-[#4B3B72]/5 rounded-full pl-6 pr-2 py-2 flex items-center w-full md:w-auto ml-3">
             <input
               type="email"
               placeholder="Email"
@@ -84,26 +119,23 @@ mt-32 md:mt-0">
             </button>
           </div>
 
-          {/* AVATAR + TEXT */}
-          <div className="flex flex-col md:flex-row items-center md:items-start gap-2 md:gap-3 text-center md:text-left">
-            {/* Avatar */}
-            <div className="flex justify-center md:justify-start -space-x-2 md:-space-x-3">
-              {users.slice(0, 2).map((user, i) => (
+          {/* Inisial email + text */}
+          <div className="flex flex-row items-center md:items-start gap-3 text-left mt-1 ml-4">
+            <div className="flex justify-center md:justify-start -space-x-2 mt-[2px]">
+              {dummyUsers.slice(0, 2).map((user, i) => (
                 <div
                   key={i}
-                  className="w-8 h-8 md:w-10 md:h-10 rounded-full border bg-gray-200 flex items-center justify-center text-[10px] md:text-sm font-semibold shadow-lg"
+                  className="w-8 h-8 md:w-9 md:h-9 rounded-full bg-white border-[1.5px] border-gray-300 flex items-center justify-center text-[9px] md:text-[11px] font-bold text-gray-700"
                 >
                   {getInitials(user.email)}
                 </div>
               ))}
             </div>
 
-            {/* TEXT – MOBILE */}
-            <p className="md:hidden text-[10px] text-[#6B6B6B] leading-4 text-center mt-1">
+            <p className="text-[10px] md:hidden text-[#6B6B6B] leading-4 text-left">
               Bergabunglah dengan komunitas pembelajar masa depan
             </p>
 
-            {/* TEXT – DESKTOP */}
             <p className="hidden md:block text-sm text-[#6B6B6B] leading-5">
               Bergabunglah dengan komunitas <br /> pembelajar masa depan
             </p>
