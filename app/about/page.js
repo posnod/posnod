@@ -17,7 +17,7 @@ export default function AboutPage() {
       <div className="w-full flex justify-center pt-20 bg-[#FBFBFB] pb-4">
         <button
           onClick={() => router.push("/about")}
-          className="flex items-center gap-3 px-2 py-2 rounded-full text-sm border border-gray-300 bg-white"
+          className="flex items-center gap-3 px-2 py-2 rounded-full text-sm border border-gray-300 bg-transparent"
         >
           {/* Logo */}
           <span
@@ -25,19 +25,19 @@ export default function AboutPage() {
               e.stopPropagation();
               router.push("/");
             }}
-            className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center bg-white transition hover:scale-110 hover:shadow-sm cursor-pointer"
+            className="w-[36px] h-[36px] rounded-full flex items-center justify-center bg-black transition hover:scale-110 hover:shadow-sm cursor-pointer"
           >
             <Image
-              src="/images/butterfly.png"
-              alt="Butterfly Icon"
-              width={20}
-              height={20}
+              src="/icons/logo.svg"
+              alt="Logo Posnod"
+              width={16}
+              height={16}
             />
           </span>
 
           {/* Text */}
           <span
-            className="font-[14px] border border-gray-300 rounded-full px-6 py-2
+            className="font-[14px] rounded-full px-6 py-2
             bg-white transition hover:scale-105 hover:shadow-sm cursor-pointer"
           >
             {buttonText}

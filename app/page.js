@@ -7,7 +7,7 @@ import Image from "next/image";
 // Fungsi mengambil inisial dari email
 function getInitials(email) {
   if (!email) return "?";
-  const name = email.split("@")[0];
+    const name = email.split("@")[0];
   return name
     .split(/[._-]/)
     .map((part) => part[0]?.toUpperCase())
@@ -42,7 +42,7 @@ export default function AvatarSimulation() {
       <div className="w-full flex justify-center pt-20 bg-[#FBFBFB] pb-4 sm:static md:fixed md:top-0 md:left-0 z-50">
         <button
           onClick={() => router.push("/about")}
-          className="flex items-center gap-3 px-2 py-2 rounded-full text-sm border border-gray-300 bg-white"
+          className="flex items-center gap-3 px-2 py-2 rounded-full text-sm border border-gray-300 bg-transpara"
         >
           {/* Logo */}
           <span
@@ -50,18 +50,18 @@ export default function AvatarSimulation() {
               e.stopPropagation();
               router.push("/");
             }}
-            className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center bg-white transition hover:scale-110 hover:shadow-sm cursor-pointer"
+            className="w-[36px] h-[36px] rounded-full flex items-center justify-center bg-black transition hover:scale-110 hover:shadow-sm cursor-pointer"
           >
             <Image
-              src="/images/butterfly.png"
-              alt="Butterfly Icon"
-              width={20}
-              height={20}
+              src="/icons/logo.svg"
+              alt="logo Posnod"
+              width={16}
+              height={16}
             />
           </span>
 
           {/* Text */}
-          <span className="font-[14px] border border-gray-300 rounded-full px-6 py-2 bg-white transition hover:scale-105 hover:shadow-sm cursor-pointer">
+          <span className="font-[14px] rounded-full px-6 py-2 bg-white transition hover:scale-105 hover:shadow-sm cursor-pointer">
             {buttonText}
           </span>
         </button>
@@ -106,8 +106,8 @@ export default function AvatarSimulation() {
               className={
                 "w-8 h-8 md:w-9 md:h-9 rounded-full ml-2 md:ml-3 flex items-center justify-center transition-all " +
                 (canSubmit
-                  ? "bg-[#3f3066] text-white shadow-md hover:scale-110 hover:shadow-lg"
-                  : "bg-[#4B3B72] text-white opacity-50 cursor-not-allowed")
+                  ? "bg-[#111] text-white shadow-md hover:scale-110 hover:shadow-lg"
+                  : "bg-[#111] text-white opacity-70 cursor-not-allowed")
               }
             >
               <Image
