@@ -13,7 +13,7 @@ const LinkFeature = () => {
   }
 
   return (
-    <div className='flex gap-4 justify-center items-center py-4 bg-[#F8F8F8] text-lg font-medium'>
+    <div className='flex gap-4 justify-center items-center py-4 bg-[#F8F8F8] md:text-lg md:gap-8 font-medium text-sm'>
       <Link href='#'>Platform</Link>
       <Link href='#'>Tools</Link>
       <Link href='#'>Tuf</Link>
