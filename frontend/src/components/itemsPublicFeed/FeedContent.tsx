@@ -1,8 +1,8 @@
 'use client';
 
 import { useRef } from 'react';
-import FeadActions from './FeadActions';
-import FeadCards from './FeadCards';
+import FeedActions from './FeedActions';
+import FeedCards from './FeedCards';
 import Base from '../icons/system/Base';
 
 type Topic = {
@@ -16,7 +16,7 @@ type Props = {
   topics: Topic[];
 };
 
-const FeadClient = ({ topics }: Props) => {
+const FeedContent = ({ topics }: Props) => {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const scroll = (direction: 'left' | 'right') => {
@@ -36,13 +36,13 @@ const FeadClient = ({ topics }: Props) => {
           <h2 className='font-semibold text-2xl'>Topik</h2>
         </div>
 
-        <FeadActions
+        <FeedActions
           onLeft={() => scroll('left')}
           onRight={() => scroll('right')}
         />
       </div>
 
-      <FeadCards
+      <FeedCards
         ref={scrollRef}
         topics={topics}
       />
@@ -50,4 +50,4 @@ const FeadClient = ({ topics }: Props) => {
   );
 };
 
-export default FeadClient;
+export default FeedContent;

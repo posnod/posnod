@@ -7,7 +7,7 @@ import Notification from '../icons/system/Notification';
 import Setting from '../icons/system/Setting';
 import Image from 'next/image';
 
-const NavbarFead = () => {
+const NavbarFeed = () => {
   return (
     <div className='border-b'>
       <div className='max-w-7xl mx-auto px-6 py-4 flex items-center justify-between gap-4'>
@@ -47,4 +47,4 @@ const NavbarFead = () => {
   );
 };
 
-export default NavbarFead;
+export default NavbarFeed;

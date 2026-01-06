@@ -1,10 +1,10 @@
 import { topics } from '@/utils/data/Topics';
-import FeadContent from '@/components/itemsPublicFeed/FeadContent'; 
+import FeedContent from '@/components/itemsPublicFeed/FeedContent'; 
 
 const Fead = () => {
   return (
     <main className="px-6 py-6">
-      <FeadContent topics={topics} />
+      <FeedContent topics={topics} />
     </main>
   );
 };

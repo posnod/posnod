@@ -13,7 +13,7 @@ interface Props {
   topics: Topic[];
 };
 
-const FeadCards = forwardRef<HTMLDivElement, Props>(
+const FeedCards = forwardRef<HTMLDivElement, Props>(
   ({ topics }, ref) => {
     return (
       <div
@@ -47,6 +47,4 @@ const FeadCards = forwardRef<HTMLDivElement, Props>(
   }
 );
 
-FeadCards.displayName = 'FeadCards';
-
-export default FeadCards;
+export default FeedCards;

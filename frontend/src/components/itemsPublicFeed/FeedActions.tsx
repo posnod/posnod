@@ -7,7 +7,7 @@ type Props = {
   onRight: () => void;
 };
 
-const FeadActions = ({ onLeft, onRight }: Props) => {
+const FeedActions = ({ onLeft, onRight }: Props) => {
   return (
     <div className="flex gap-2 text-gray-500">
       <Plus className="cursor-pointer" />
@@ -18,4 +18,4 @@ const FeadActions = ({ onLeft, onRight }: Props) => {
   );
 };
 
-export default FeadActions;
+export default FeedActions;
