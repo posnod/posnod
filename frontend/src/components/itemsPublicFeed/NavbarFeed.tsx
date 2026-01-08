@@ -8,13 +8,16 @@ import Message from '../icons/system/Message';
 import Notification from '../icons/system/Notification';
 import Setting from '../icons/system/Setting';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 
 const NavbarFeed = () => {
   const [searchMode, setSearchMode] = useState(false);
+  const pathname = usePathname();
+  const isFeedPage = pathname === '/feed';
 
   return (
     <header className='border-b bg-white'>
-      <div className='max-w-7xl mx-auto px-4 md:px-2 py-3'>
+      <div className={`${isFeedPage? 'max-w-7xl px-4 md:px-2' : 'w-full md:px-10 px-5'} mx-auto py-3`}>
         {/* ================= MOBILE ================= */}
         <div className='sm:hidden'>
           {searchMode ? (
