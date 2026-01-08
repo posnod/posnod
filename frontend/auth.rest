@@ -1,0 +1,14 @@
+POST https://laundry.mitraanumkmmandiri.com/api/auth/register
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "mardinmardin",
+  "email": "mardinmardin28@example.com",
+  "password": "mardin123"
+}
+
+
+### 
+# Authorization: Bearer 11|ltRIk5q6U9GAv7TDth2gsrCCIbFxNjm8mxR8OMzu032354ee
+
