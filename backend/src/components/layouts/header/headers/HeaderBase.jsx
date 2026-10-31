@@ -2,7 +2,7 @@ import React from 'react';
 
 const HeaderBase = ({ Left, Center, Right }) => {
   return (
-    <header className="max-w-full h-25 bg-white border-b border-dark">
+    <header className="max-w-full h-25 bg-transparent border-b border-dark">
       <div>
         <div>
           {Left}

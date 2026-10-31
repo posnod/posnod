@@ -1,6 +1,6 @@
 export default function HeaderContent1({ left, center, right }) {
   return (
-    <header className="fixed max-w-full h-25 flex items-center justify-center content-p1 bg-background border-b">
+    <header className="relative z-40 max-w-full h-25 flex items-center justify-center content-p1 bg-transparent border-b">
       <div className="w-7xl flex items-center justify-center">
         <div className="w-16">
           {left}

@@ -1,18 +1,29 @@
 'use client';
 
-import clsx from "clsx";
+import clsx from 'clsx';
+import Link from 'next/link';
+import { forwardRef } from 'react';
+import { Slot } from '@radix-ui/react-slot';
 
-export function Button({
-  variant = 'fill',
-  size = 'md',
-  radius = '8',
-  gap = 'fixed',
-  iconLeft,
-  iconRight,
-  children,
-  onClick,
-  ...props
-}) {
+const Button = forwardRef(function Button(
+  {
+    variant = 'fill',
+    size = 'md',
+    radius = '8',
+    gap = 'fixed',
+    iconLeft,
+    iconRight,
+    children,
+    onClick,
+    href,
+    target,
+    rel,
+    className,
+    asChild,
+    ...props
+  },
+  ref
+) {
   const base = 'btn';
 
   const variantClass = {
@@ -21,14 +32,14 @@ export function Button({
     text: 'btn-text',
     ghost: 'btn-ghost',
     accent: 'btn-accent',
-  }[variant];
+  }[variant] || 'btn-fill';
 
   const sizeClass = {
     sm: 'btn-sm',
     md: 'btn-md',
     lg: 'btn-lg',
     xl: 'btn-xl',
-  }[size];
+  }[size] || 'btn-md';
 
   const radiusClass = `radius-${radius}`;
 
@@ -39,24 +50,53 @@ export function Button({
           md: 'gap-md',
           lg: 'gap-lg',
           xl: 'gap-xl',
-        }[size]
-      : 'gap-fixed';
+        }[size] || 'gap-md'
+      : '';
 
-  return (
-    <button
+  const buttonClasses = clsx(
+    base,
+    variantClass,
+    sizeClass,
+    radiusClass,
+    gapClass,
+    className
+  );
+
+  const Comp = asChild ? Slot : 'button';
+
+  const renderButton = (elementProps) => (
+    <Comp
+      {...elementProps}
+      ref={ref}
+      className={buttonClasses}
       onClick={onClick}
-      className={clsx(
-        base,
-        variantClass,
-        sizeClass,
-        radiusClass,
-        gapClass
-      )}
-      {...props}
     >
       {iconLeft && <span className="icon-left">{iconLeft}</span>}
       {children}
       {iconRight && <span className="icon-right">{iconRight}</span>}
-    </button>
+    </Comp>
   );
-}
+
+  if (href) {
+    const isExternal = href.startsWith('http') || href.startsWith('//');
+
+    if (isExternal) {
+      return renderButton({
+        href,
+        target: target || '_blank',
+        rel: rel || 'noopener noreferrer',
+        ...props,
+      });
+    }
+
+    return (
+      <Link href={href} legacyBehavior passHref>
+        {renderButton({ ...props })}
+      </Link>
+    );
+  }
+
+  return renderButton(props);
+});
+
+export default Button;

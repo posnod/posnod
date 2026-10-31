@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-primary border-t border-dark py-6 px-4 mt-auto">
+    <footer className="bg-transparent border-t border-dark py-6 px-4 mt-auto">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center text-label">
         {/* Tautan kebijakan */}
         <div className="flex space-x-6 mb-4 md:mb-0">

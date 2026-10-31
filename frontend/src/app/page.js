@@ -1,36 +1,44 @@
-"use client";
+"use client"
 
-import { Button } from '@/components/foundations/Button';
-import Pages from '@/components/layouts/page/Pages';
+import Image from 'next/image';
+import Button from '@/components/foundations/Button';
 
-export default function Page() {
-    const openNewTab = () => {
-      window.open("https://docs.posnod.com", "_blank", "noopener,noreferrer");
-    };
-
+export default function LandingPage() {
   return (
-    <Pages size="lg">
-      <div className="page-p-hero w-full flex flex-col gap-6 items-center justify-start">
-        <h1 className="text-d2 text-center">
-          Selamat Datang di Project Posnod
-        </h1>
-        <p className="text-s3 text-center max-w-2xl">
-          Ini adalah pondasi pengembangan aplikasi Posnod.<br />
-          Semua komponen, sistem desain, dan eksperimen pembelajaran<br />
-          dibangun, diuji, dan dikembangkan dari sini.
-        </p>
-        <div>
-          <Button
-            variant="fill"
-            gap="by-size"
-            size="lg"
-            radius="32"
-            onClick={openNewTab}
-          >
-            Baca Dokumentasi
-          </Button>
+    <main className="relative flex-1 w-full bg-tertiary overflow-hidden pt-16">
+      
+      {/* Ilustrasi Landing */}
+      <div className="fixed inset-0 pointer-events-none items-center justify-end hidden lg:flex pt-18 pb-16">
+        <Image
+          src="/images/IllustratorLand.png"
+          alt="Abstract Learning Illustration"
+          width={400}
+          height={400}
+          priority
+          className="w-auto h-auto max-w-md" 
+        />
+      </div>
+
+      {/* Konten Utama */}
+    <div className="relative z-10 flex flex-col justify-center min-h-[55vh] px-6 pt-4 pb-8 mx-auto text-center lg:text-left items-center lg:items-start">
+      <div className="container-form space-y-8 lg:pl-20">
+          <h1 className="text-d1 text-primary">
+            Everything <br /> worth learning
+          </h1>
+          <p className="text-body-base md:text-body-lg lg:text-xl text-primary">
+            Bangun jalur belajar yang sesuai dengan rasa ingin tahumu.
+          </p>
+
+          {/* Button */}
+          <div className="pt-4">
+            <Button href="/register" variant="accent" size="lg" radius="32">
+              Bergabung Sekarang
+            </Button>
+          </div>
+
         </div>
       </div>
-    </Pages>
+
+    </main>
   );
 }

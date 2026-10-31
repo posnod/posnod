@@ -1,248 +1,284 @@
 :root {
-    /* =========> FONT FAMILY <========= */
+  /* =========> FONT FAMILY <========= */
   --font-heme: 'Heme Pro';
-  body {
-    font-family: var(--font-heme);
 
-    /* Font Size Mobile */
-  --mobile-display-1: 2.5rem;
-  --mobile-display-2: 2rem;
-  --mobile-subtitle: 1.125rem;
+/* Font Size Mobile */
+  /* Display */
+  --mobile-display-1: 3.25rem;      /* 52px */
+  --mobile-display-2: 2.0rem;       /* 32px */
+  --mobile-subtitle: 1.125rem;      /* 18px */
 
-  --mobile-section-1: 1.75rem;
-  --mobile-section-2: 1.5rem;
-  --mobile-section-3: 1.125rem;
-  
-  --mobile-heading-1: 1.5rem;
-  --mobile-heading-2: 1.25rem;
-  --mobile-heading-3: 1.125rem;
-  --mobile-heading-4: 1.063rem;
-  --mobile-heading-5: 1rem;
-  --mobile-heading-6: 0.875rem;
+  /* Section */
+  --mobile-section-1: 1.5rem;       /* 24px */
+  --mobile-section-2: 1.25rem;      /* 20px */
+  --mobile-section-3: 1.125rem;     /* 18px */
 
-  --mobile-body-large: 1.063rem;
-  --mobile-body-base: 0.938rem;
-  --mobile-body-small: 0.875rem;
-  --mobile-body-extraSmall: 0.75rem;
+  /* Heading */
+  --mobile-heading-1: 1.25rem;      /* 20px */
+  --mobile-heading-2: 1.25rem;      /* 20px */
+  --mobile-heading-3: 1.125rem;     /* 18px */
+  --mobile-heading-4: 1.0rem;       /* 16px */
+  --mobile-heading-5: 1.0625rem;    /* 17px */
+  --mobile-heading-6: 0.875rem;     /* 14px */
 
-  --mobile-caption: 0.75rem;
-  --mobile-label: 0.813rem;
+  /* Body */
+  --mobile-body-large: 1.125rem;        /* 18px */
+  --mobile-body-base: 1.0rem;           /* 16px */
+  --mobile-body-small: 0.875rem;        /* 14px */
+  --mobile-body-extraSmall: 0.875rem;   /* 14px */
 
-  --mobile-button-extra-large: 1rem;
-  --mobile-button-large: 0.938rem;
-  --mobile-button-medium: 0.875remm;
-  --mobile-button-small: 0.813rem;
+  /* Caption & Label */
+  --mobile-caption: 0.875rem;   /* 14px */
+  --mobile-label: 0.875rem;     /* 14px */
 
-    /* Font Size Tablet */
-  --tablet-display-1: 3.25rem;
-  --tablet-display-2: 2.5rem;
-  --tablet-subtitle: 1.25rem;
+  /* Button */
+  --mobile-button-extra-large: 1.125rem;  /* 18px */
+  --mobile-button-large: 1.0rem;          /* 16px */
+  --mobile-button-medium: 0.875rem;       /* 14px */
+  --mobile-button-small: 0.875rem;        /* 14px */
 
-  --tablet-section-1: 2rem;
-  --tablet-section-2: 1.625rem;
-  --tablet-section-3: 1.25rem;
+/* Font Size Tablet */
+  /* Display */
+  --tablet-display-1: 3.75rem;      /* 60px */
+  --tablet-display-2: 2.5rem;       /* 40px */
+  --tablet-subtitle: 1.25rem;       /* 20px */
 
-  --tablet-heading-1: 1.625rem;
-  --tablet-heading-2: 1.375rem;
-  --tablet-heading-3: 1.188rem;
-  --tablet-heading-4: 1.125rem;
-  --tablet-heading-5: 1rem;
-  --tablet-heading-6: 0.875rem;
+  /* Section */
+  --tablet-section-1: 2.0rem;       /* 32px */
+  --tablet-section-2: 1.625rem;     /* 26px */
+  --tablet-section-3: 1.375rem;     /* 22px */
 
-  --tablet-body-large: 1.125rem:
-  --tablet-body-base: 1rem;
-  --tablet-body-small: 0.875rem;
-  --tablet-body-extraSmall: 0.75rem;
+  /* Heading */
+  --tablet-heading-1: 1.625rem;     /* 26px */
+  --tablet-heading-2: 1.25rem;      /* 20px */
+  --tablet-heading-3: 1.25rem;      /* 20px */
+  --tablet-heading-4: 1.1875rem;    /* 19px */
+  --tablet-heading-5: 1.0rem;       /* 16px */
+  --tablet-heading-6: 0.875rem;     /* 14px */
 
-  --tablet-caption: 0.75rem;
-  --tablet-label: 0.813rem;
+  /* Body */
+  --tablet-body-large: 1.25rem;         /* 20px */
+  --tablet-body-base: 1.0rem;           /* 16px */
+  --tablet-body-small: 0.875rem;        /* 14px */
+  --tablet-body-extraSmall: 0.875rem;   /* 14px */
 
-  --tablet-button-extra-large: 1rem;
-  --tablet-button-large: 0.938rem;
-  --tablet-button-medium: 0.875remm;
-  --tablet-button-small: 0.813rem;
+  /* Caption & Label */
+  --tablet-caption: 0.875rem;   /* 14px */
+  --tablet-label: 0.875rem;     /* 14px */
 
-  /* Font Size Desktop */
-  --desktop-display-1: 4rem;
-  --desktop-display-2: 3rem;
-  --desktop-subtitle: 1.5rem;
+  /* Button */
+  --tablet-button-extra-large: 1.125rem;  /* 18px */
+  --tablet-button-large: 1.0rem;          /* 16px */
+  --tablet-button-medium: 1.0rem;         /* 16px */
+  --tablet-button-small: 0.875rem;        /* 14px */
 
-  --desktop-section-1: 2.25rem;
-  --desktop-section-2: 1.75rem;
-  --desktop-section-3: 1.25rem;
+/* Font Size Desktop */
+  /* Display */
+  --desktop-display-1: 4.0rem;      /* 64px */
+  --desktop-display-2: 2.25rem;     /* 36px */
+  --desktop-subtitle: 1.25rem;      /* 20px */
 
-  --desktop-heading-1: 1.75rem;
-  --desktop-heading-2: 1.5rem;
-  --desktop-heading-3: 1.25rem;
-  --desktop-heading-4: 1.125rem;
-  --desktop-heading-5: 1rem;
-  --desktop-heading-6: 0.875rem;
+  /* Section */
+  --desktop-section-1: 2.25rem;     /* 36px */
+  --desktop-section-2: 1.75rem;     /* 28px */
+  --desktop-section-3: 1.5rem;      /* 24px */
 
-  --desktop-body-large: 1.125rem:
-  --desktop-body-base: 1rem;
-  --desktop-body-small: 0.875rem;
-  --desktop-body-extraSmall: 0.75rem;
+  /* Heading */
+  --desktop-heading-1: 1.75rem;     /* 28px */
+  --desktop-heading-2: 1.5rem;      /* 24px */
+  --desktop-heading-3: 1.375rem;    /* 22px */
+  --desktop-heading-4: 1.25rem;     /* 20px */
+  --desktop-heading-5: 1.0rem;      /* 16px */
+  --desktop-heading-6: 0.875rem;    /* 14px */
 
-  --desktop-caption: 0.75rem;
-  --desktop-label: 0.813rem;
+  /* Body */
+  --desktop-body-large: 1.25rem;        /* 20px */
+  --desktop-body-base: 1.0rem;          /* 16px */
+  --desktop-body-small: 0.875rem;       /* 14px */
+  --desktop-body-extraSmall: 0.875rem;  /* 14px */
 
-  --desktop-button-extra-large: 1rem;
-  --desktop-button-large: 0.938rem;
-  --desktop-button-medium: 0.875remm;
-  --desktop-button-small: 0.813rem;
+  /* Caption & Label */
+  --desktop-caption: 0.875rem;  /* 14px */
+  --desktop-label: 0.875rem;    /* 14px */
 
-  /* Line Hight */
+  /* Button */
+  --desktop-button-extra-large: 1.125rem; /* 18px */
+  --desktop-button-large: 1.0rem;         /* 16px */
+  --desktop-button-medium: 1.0rem;        /* 16px */
+  --desktop-button-small: 0.875rem;       /* 14px */
+
+  /* Line Height Mobile */
+  --lh-14: 1.3125rem;
+  --lh-18-a: 1.2375rem;
+  --lh-18-b: 1.35rem;
+  --lh-16: 1.5rem;
+  --lh-17: 1.59375rem;
+  --lh-18-c: 1.6875rem;
+  --lh-20-a: 1.8rem;
+  --lh-20-b: 1.875rem;
+  --lh-24-a: 2.1rem;
+  --lh-32: 2.2rem;
+  --lh-24-b: 2.25rem;
+  --lh-52: 3.575rem;
+
+  /* Line Height Tablet */
+  --lh-12: 0.75rem;
+  --lh-14: 0.875rem;
+  --lh-15: 0.9375rem;
   --lh-16: 1rem;
   --lh-18: 1.125rem;
+  --lh-19: 1.1875rem;
   --lh-20: 1.25rem;
   --lh-22: 1.375rem;
-  --lh-24: 1.5rem;
-  --lh-25: 1.563rem;
   --lh-26: 1.625rem;
-  --lh-27: 1.688rem;
-  --lh-28: 1.75rem;
-  --lh-30: 1.875rem;
   --lh-32: 2rem;
-  --lh-34: 2.125rem;
-  --lh-36: 2.25rem;
   --lh-40: 2.5rem;
-  --lh-48: 3rem;
-  --lh-56: 3.5rem;
   --lh-60: 3.75rem;
-  --lh-72: 4.5rem;
-  
+
+  /* Line Height Desktop */
+  --lh-14: 1.3125rem;
+  --lh-16: 1.5rem;
+  --lh-18: 1.6875rem;
+  --lh-22-b: 1.65rem;
+  --lh-20: 1.875rem;
+  --lh-22-a: 1.925rem;
+  --lh-28-a: 2.1rem;
+  --lh-24: 2.25rem;
+  --lh-28-b: 2.625rem;
+  --lh-36: 2.7rem;
+  --lh-48: 3.3rem;
+  --lh-64: 4.4rem;
 
   /* Letter Spacing */
   --ls-0-3: -0.01em;
   --ls-0-2: -0.005em;
   --ls-0-1: -0.0025em;
   --ls-1: 0.01em;
-  }
 }
 
 /* Mobile */
 .text-d1 {
   font-size: var(--mobile-display-1);
-  line-height: var(--lh-48);
+  line-height: var(--lh-52);
 }
 
 .text-d2 {
   font-size: var(--mobile-display-2);
-  line-height: var(--lh-40);
+  line-height: var(--lh-32);
 }
 
 .text-sub {
   font-size: var(--mobile-subtitle);
-  line-height: var(--lh-28);
+  line-height: var(--lh-18-c);
 }
 
 .text-s1 {
   font-size: var(--mobile-section-1);
-  line-height: var(--lh-36);
+  line-height: var(--lh-24-b);
 }
 
 .text-s2 {
   font-size: var(--mobile-section-2);
-  line-height: var(--lh-32);
+  line-height: var(--lh-20-b);
 }
 
 .text-s3 {
   font-size: var(--mobile-section-3);
-  line-height: var(--lh-26);
+  line-height: var(--lh-18-b);
 }
 
 .text-h1 {
   font-size: var(--mobile-heading-1);
-  line-height: var(--lh-32);
+  line-height: var(--lh-20-b);
 }
 
 .text-h2 {
   font-size: var(--mobile-heading-2);
-  line-height: var(--lh-28);
+  line-height: var(--lh-20-b);
 }
 
 .text-h3 {
   font-size: var(--mobile-heading-3);
-  line-height: var(--lh-26);
+  line-height: var(--lh-18-c);
 }
 
 .text-h4 {
   font-size: var(--mobile-heading-4);
-  line-height: var(--lh-25);
+  line-height: var(--lh-16);
 }
 
 .text-h5 {
   font-size: var(--mobile-heading-5);
-  line-height: var(--lh-24);
+  line-height: var(--lh-17);
 }
 
 .text-h6 {
   font-size: var(--mobile-heading-6);
-  line-height: var(--lh-22);
+  line-height: var(--lh-14);
 }
 
 .text-body-lg {
   font-size: var(--mobile-body-large);
-  line-height: var(--lh-26);
+  line-height: var(--lh-18-c);
 }
 
 .text-body-base {
   font-size: var(--mobile-body-base);
-  line-height: var(--lh-24);
+  line-height: var(--lh-16);
 }
 
 .text-body-sm {
   font-size: var(--mobile-body-small);
-  line-height: var(--lh-22);
+  line-height: var(--lh-14);
 }
 
 .text-body-xs {
   font-size: var(--mobile-body-extraSmall);
-  line-height: var(--lh-18);
+  line-height: var(--lh-14);
 }
 
 .text-caption {
   font-size: var(--mobile-caption);
-  line-height: var(--lh-16);
+  line-height: var(--lh-14);
   letter-spacing: var(--ls-1);
 }
 
 .text-label {
   font-size: var(--mobile-label);
-  line-height: var(--lh-18);
+  line-height: var(--lh-14);
   letter-spacing: var(--ls-1);
 }
 
 .text-btn-xl {
   font-size: var(--mobile-button-extra-large);
-  line-height: var(--lh-24);
+  line-height: var(--lh-18-c);
   letter-spacing: var(--ls-1);
   text-transform: uppercase;
 }
 
 .text-btn-lg {
   font-size: var(--mobile-button-large);
-  line-height: var(--lh-22);
+  line-height: var(--lh-16);
   letter-spacing: var(--ls-1);
   text-transform: uppercase;
 }
 
 .text-btn-md {
   font-size: var(--mobile-button-medium);
-  line-height: var(--lh-20);
+  line-height: var(--lh-14);
   letter-spacing: var(--ls-1);
   text-transform: uppercase;
 }
 
 .text-btn-sm {
   font-size: var(--mobile-button-small);
-  line-height: var(--lh-20);
+  line-height: var(--lh-14);
   letter-spacing: var(--ls-1);
   text-transform: uppercase;
 }
 
 /* Tablet */
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .text-d1 {
     font-size: var(--tablet-display-1);
     line-height: var(--lh-60);
@@ -251,12 +287,12 @@
 
   .text-d2 {
     font-size: var(--tablet-display-2);
-    line-height: var(--lh-48);
+    line-height: var(--lh-40);
   }
 
   .text-sub {
     font-size: var(--tablet-subtitle);
-    line-height: var(--lh-30);
+    line-height: var(--lh-26);
   }
 
   .text-s1 {
@@ -267,28 +303,28 @@
 
   .text-s2 {
     font-size: var(--tablet-section-2);
-    line-height: var(--lh-34);
+    line-height: var(--lh-32);
   }
 
   .text-s3 {
     font-size: var(--tablet-section-3);
-    line-height: var(--lh-28);
+    line-height: var(--lh-26);
   }
 
   .text-h1 {
     font-size: var(--tablet-heading-1);
-    line-height: var(--lh-34);
+    line-height: var(--lh-32);
     letter-spacing: var(--ls-0-1);
   }
 
   .text-h2 {
     font-size: var(--tablet-heading-2);
-    line-height: var(--lh-30);
+    line-height: var(--lh-26);
   }
 
   .text-h3 {
     font-size: var(--tablet-heading-3);
-    line-height: var(--lh-27);
+    line-height: var(--lh-26);
   }
 
   .text-h4 {
@@ -298,27 +334,27 @@
 
   .text-h5 {
     font-size: var(--tablet-heading-5);
-    line-height: var(--lh-24);
+    line-height: var(--lh-20);
   }
 
   .text-h6 {
     font-size: var(--tablet-heading-6);
-    line-height: var(--lh-22);
+    line-height: var(--lh-18);
   }
 
   .text-body-lg {
     font-size: var(--tablet-body-large);
-    line-height: var(--lh-28);
+    line-height: var(--lh-26);
   }
 
   .text-body-base {
     font-size: var(--tablet-body-base);
-    line-height: var(--lh-26);
+    line-height: var(--lh-22);
   }
 
   .text-body-sm {
     font-size: var(--tablet-body-small);
-    line-height: var(--lh-22);
+    line-height: var(--lh-18);
   }
 
   .text-body-xs {
@@ -361,45 +397,45 @@
 
   .text-btn-sm {
     font-size: var(--tablet-button-small);
-    line-height: var(--lh-20);
+    line-height: var(--lh-18);
     letter-spacing: var(--ls-1);
     text-transform: uppercase;
   }
 }
 
 /* Desktop */
-@media (min-width: 1025px) {
+@media (min-width: 1280px) {
   .text-d1 {
     font-size: var(--desktop-display-1);
-    line-height: var(--lh-72);
+    line-height: var(--lh-64);
     letter-spacing: var(--ls-0-3);
   }
 
   .text-d2 {
     font-size: var(--desktop-display-2);
-    line-height: var(--lh-56);
+    line-height: var(--lh-48);
     letter-spacing: var(--ls-0-2);
   }
 
   .text-sub {
     font-size: var(--desktop-subtitle);
-    line-height: var(--lh-34);
+    line-height: var(--lh-28-b);
   }
 
   .text-s1 {
     font-size: var(--desktop-section-1);
-    line-height: var(--lh-44);
+    line-height: var(--lh-36);
     letter-spacing: var(--ls-0-1);
   }
 
   .text-s2 {
     font-size: var(--desktop-section-2);
-    line-height: var(--lh-38);
+    line-height: var(--lh-28-b);
   }
 
   .text-s3 {
     font-size: var(--desktop-section-3);
-    line-height: var(--lh-32);
+    line-height: var(--lh-28-a);
   }
 
   .text-h1 {
@@ -410,42 +446,42 @@
 
   .text-h2 {
     font-size: var(--desktop-heading-2);
-    line-height: var(--lh-32);
+    line-height: var(--lh-28-b);
   }
 
   .text-h3 {
     font-size: var(--desktop-heading-3);
-    line-height: var(--lh-28);
+    line-height: var(--lh-24);
   }
 
   .text-h4 {
     font-size: var(--desktop-heading-4);
-    line-height: var(--lh-26);
+    line-height: var(--lh-24);
   }
 
   .text-h5 {
     font-size: var(--desktop-heading-5);
-    line-height: var(--lh-24);
+    line-height: var(--lh-20);
   }
 
   .text-h6 {
     font-size: var(--desktop-heading-6);
-    line-height: var(--lh-22);
+    line-height: var(--lh-18);
   }
 
   .text-body-lg {
     font-size: var(--desktop-body-large);
-    line-height: var(--lh-28);
+    line-height: var(--lh-28-a);
   }
 
   .text-body-base {
     font-size: var(--desktop-body-base);
-    line-height: var(--lh-26);
+    line-height: var(--lh-24);
   }
 
   .text-body-sm {
     font-size: var(--desktop-body-small);
-    line-height: var(--lh-22);
+    line-height: var(--lh-18);
   }
 
   .text-body-xs {
@@ -474,7 +510,7 @@
 
   .text-btn-lg {
     font-size: var(--desktop-button-large);
-    line-height: var(--lh-22);
+    line-height: var(--lh-22-a);
     letter-spacing: var(--ls-1);
     text-transform: uppercase;
   }
@@ -488,9 +524,28 @@
 
   .text-btn-sm {
     font-size: var(--desktop-button-small);
-    line-height: var(--lh-20);
+    line-height: var(--lh-18);
     letter-spacing: var(--ls-1);
     text-transform: uppercase;
   }
+}
 
+
+/* ========= STATE TEXT COLORS ========= */
+@layer utilities {
+  .text-success {
+    color: var(--state-success);
+  }
+
+  .text-error {
+    color: var(--state-error);
+  }
+
+  .text-warning {
+    color: var(--state-warning);
+  }
+
+  .text-info {
+    color: var(--state-info);
+  }
 }
