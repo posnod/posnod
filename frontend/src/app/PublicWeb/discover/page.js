@@ -297,7 +297,7 @@ export default function Discover() {
       </section>
 
       {/* Section CTA */}
-      <section className="py-20 mb-14 bg-tertiary">
+      <section className="py-20 mb-14 bg-secondary">
         <div className="container-wide mx-auto px-6 text-center">
           <h2 className="text-h3 mb-6">Coba mulai sekarang</h2>
           <div className="flex justify-center items-center gap-4">
