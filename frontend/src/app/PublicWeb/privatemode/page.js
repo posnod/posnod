@@ -12,7 +12,7 @@ import ArrowRight2 from '@/components/icons/system/ArrowRight2';
 
 export default function PrivateMode() {
   return (
-    <div className="text-primary bg-tertiary">
+    <div className="text-primary bg-white">
       {/* Section 1: Hero */}
       <section className="page-p-hero pb-6 md:pb-8">
         <div className="container-wide mx-auto px-6">

@@ -5,7 +5,7 @@ import Button from '@/components/foundations/Button';
 
 export default function LandingPage() {
   return (
-    <main className="relative flex-1 w-full bg-tertiary overflow-hidden pt-16">
+    <main className="relative flex-1 w-full bg-white overflow-hidden pt-16">
       
       {/* Ilustrasi Landing */}
       <div className="fixed inset-0 pointer-events-none items-center justify-end hidden lg:flex pt-18 pb-16">
@@ -21,7 +21,7 @@ export default function LandingPage() {
 
       {/* Konten Utama */}
     <div className="relative z-10 flex flex-col justify-center min-h-[55vh] px-6 pt-4 pb-8 mx-auto text-center lg:text-left items-center lg:items-start">
-      <div className="container-form space-y-8 lg:pl-20">
+      <div className="container-wide space-y-8 lg:pl-16">
           <h1 className="text-d1 text-primary">
             Everything <br /> worth learning
           </h1>

@@ -7,7 +7,7 @@ import Button from '@/components/foundations/Button';
 
 export default function Tentang() {
   return (
-    <main className="text-primary bg-tertiary">
+    <main className="text-primary bg-white">
       
       {/* About Hero */}
       <section className="pt-20 pb-12 px-4 flex flex-col items-center text-center">

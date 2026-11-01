@@ -40,7 +40,7 @@ export default function Header() {
   return (
     <header
       className={`w-full sticky top-0 z-50 transition-colors duration-300 ${
-        isScrolled ? 'bg-tertiary' : 'bg-tertiary'
+        isScrolled ? 'bg-white' : 'bg-white'
       }`}
     >
       <div className="container-wide mx-auto px-6 h-20 flex items-center justify-between">

@@ -30,7 +30,7 @@ export default function Discover() {
   const [openFAQ, setOpenFAQ] = useState(null);
 
   return (
-    <div className="text-primary bg-tertiary">
+    <div className="text-primary bg-white">
       {/* Section Hero */}
       <section className="page-p-hero pb-6 md:pb-8">
         <div className="container-wide mx-auto px-6">

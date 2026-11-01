@@ -2,7 +2,7 @@
 
 export default function PrivacyPolicyPage() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-white">
       <section className="mx-auto w-full max-w-180 px-6 py-20 md:px-0 md:py-24">
         {/* Title */}
         <h1 className="text-d2 mb-10">Kebijakan Privasi</h1>

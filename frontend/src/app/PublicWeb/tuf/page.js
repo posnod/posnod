@@ -17,7 +17,7 @@ export default function TufPage() {
   const [activeTab] = useState('topik');
 
   return (
-    <div className="text-primary bg-tertiary">
+    <div className="text-primary bg-white">
       {/* Section Hero */}
       <section className="page-p-hero pb-6 md:pb-8">
         <div className="container-wide mx-auto px-6">
