@@ -109,7 +109,7 @@ export default function TufPage() {
 
       {/* Section How It Works */}
       <section className="py-12 md:py-16">
-        <div className="container-compact mx-auto px-6">
+        <div className="container-reading mx-auto px-6">
           <div className="mb-12 md:mb-16 lg:mb-20 text-center">
             <span className="text-body-base text-secondary block mb-3 md:mb-4">
               How it works?
