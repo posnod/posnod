@@ -1,0 +1,25 @@
+{
+  "API CONTRACT POSNOD": {
+    "AUTH": [
+      {
+        "url": "http//:localhost:4000/api/auth/check-email",
+        "method": "POST",
+        "request Body": {
+          "email": "example@gmail.com"
+        },
+        "response success": {
+          "success": true,
+          "message": "Email belum terdaftar. Silakan lanjutkan pendaftaran.",
+          "data": {
+            "email": "mardin@gmail.com",
+            "isRegistered": false
+          }
+        },
+        "response Error": {
+          "success": false,
+          "message": "Email wajib diisi"
+        }
+      }
+    ]
+  }
+}
