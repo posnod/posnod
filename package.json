@@ -6,6 +6,10 @@
   "scripts": {
     "frontend": "pnpm --filter frontend dev",
     "backend": "pnpm --filter backend dev",
+    "backend:lint": "pnpm --filter backend lint",
+    "backend:lint:fix": "pnpm --filter backend lint:fix",
+    "backend:test": "pnpm --filter backend test",
+    "backend:build": "pnpm --filter backend build",
     "dev": "concurrently \"pnpm frontend\" \"pnpm backend\""
   },
   "keywords": [],
